@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+body{
+    background-color: #080a0a;
+    color: #fff;
+    animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav{
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.27);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px black;
+    z-index: 1;
+
+}
+nav .logo{
+    width: 100px;
+    margin-top: 5px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 90px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.content h3{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: -35px;
+    margin-bottom: 0;
+}
+
+.content p{
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    margin-top: -10px;
+    font-style: italic;
+    
+}
+.fade {
+    animation: fadeIn 5.5s;
+}
+@keyframes fadeIn{
+    0% {opacity: 0%}
+    100% {opacity: 1;}
+}
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+ 
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+     width: 100%;
+     height: auto;
+    }
+}
+
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.music{
+    bottom: 0; 
+    position: absolute; 
+    right: 0;
+    opacity: 2%;
+    z-index: 1;
+}
+
+/*---header---*/
+.tl{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+.tl h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+    position: relative;
+    width: max-content;
+    color: white;
+}
+.tl h1::after{
+    content: '';
+    background: linear-gradient(to right, #59D4FF, #1025BF, #0D1524);
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.tl h3{
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 0;
+}
+.tl h2{
+    font-weight: 300;
+    font-size: 20px;
+}
+/*---drawings---*/
+.container{
+    position: relative;
+}
+.container .wrapper{
+    width: 65vw;
+    height: 80vh;
+    box-shadow: 10px 10px 20px rgba(0,0,0.6);
+    margin: 5rem auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.container .wrapper-holder{
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    height: 100%;
+    width: 100%;
+    animation: slider 15s ease-in-out infinite;
+}
+.container #slider-img-1{
+    background-image: url(ale.jpg);
+    background-position: center;
+}
+.container #slider-img-2{
+    background-image: url(sie.jpg);
+    background-position: center;
+}
+.container #slider-img-3{
+    background-image: url(roblox.jpg);
+    background-position: center;
+}
+.container #slider-img-4{
+    background-image: url(ryu3.jpeg);
+    background-position: center;
+}
+.container .button-holder .button{
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.container .button-holder{
+    position: absolute;
+    left: 45%;
+    bottom: 0%;
+}
+.button:hover{
+    box-shadow: 0px 0px 7px 4px #59D4FF;
+}
+@keyframes slider{
+    0%{transform: translateX(0%);}
+    10%{transform: translateX(-100%);}
+    20%{transform: translateX(-100%);}
+    30%{transform: translateX(-200%);}
+    40%{transform: translateX(-200%);}
+    50{transform: translateX(-200%);}
+    60%{transform: translateX(-300%);}
+    70%{transform: translateX(-300%);}
+    80%{transform: translateX(-300%);}
+    90%{transform: translateX(0%);}
+    100%{transform: translateX(0%);}
+}
+
+/*---ae---*/
+.ae{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    margin-top: -20px;
+}
+.ae h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+    position: relative;
+    width: max-content;
+    color: white;
+}
+.ae h1::after{
+    content: '';
+    background: linear-gradient(to right, #59D4FF, #1025BF, #0D1524);
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.ae h3{
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 0;
+}
+.ae h2{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.row{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+
+}
+
+.ae-col{
+    flex-basis: 35%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+}
+.ae-col video{
+    width: 95%;
+    display: block;
+}
+
+/*re*/
+
+.re{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    margin-top: -20px;
+}
+.re h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+    position: relative;
+    width: max-content;
+    color: white;
+}
+.re h1::after{
+    content: '';
+    background: linear-gradient(to right, #59D4FF, #1025BF, #0D1524);
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.re h3{
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.btn a{
+    font-size: 20px;
+    font-weight: 500;
+}
+.btn{
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 1000px;
+    text-decoration: none;
+    margin-top: -50px;
+    margin-bottom: 0;
+
+}
+.btn::after{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #080a0a;
+    left: 0;
+    top: 0;
+    border-radius: 1000px;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 1000px;
+    background: linear-gradient(to bottom right, #59D4FF, #1025BF, #0D1524, #59D4FF);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2.5px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+
+}
+@keyframes glowing{
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+.btn:hover::before{
+    opacity: 1;
+}
+
+/*---icons---*/
+.icons{
+    color: white;
+    margin: 40px -10px;
+    cursor: pointer;
+    padding: 0 50px;
+    text-align: center;
+    margin-bottom: -30px;
+}
+
+.fa-arrow-left {
+  color: white;
+}
+
+.fa-arrow-right {
+  color: white;
+}
+
+/*---footer---*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: -100px;
+}
+
+.footer h4{
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: white;
+}
+.footer p{
+    font-size: 10px;
+    color: white;
+}
